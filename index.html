@@ -79,6 +79,19 @@
     audio {
       display: none; /* Hide audio controls */
     }
+
+    /* Flower animation */
+    .flower {
+      position: absolute;
+      width: 100px;
+      animation: float 5s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
@@ -92,6 +105,12 @@
     <p class="signature">With all my love,<br>— Priya 💖</p>
     <div class="footer">Made with ❤️ and heartfelt gratitude</div>
   </div>
+  
+  <!-- Flower images -->
+  <img src="https://example.com/flower1.png" class="flower" style="top: 10%; left: 5%;" alt="Flower" />
+  <img src="https://example.com/flower2.png" class="flower" style="top: 20%; right: 10%;" alt="Flower" />
+  <img src="https://example.com/flower3.png" class="flower" style="top: 30%; left: 15%;" alt="Flower" />
+  
   <audio id="bgm" autoplay loop>
     <source src="https://cdn.pixabay.com/download/audio/2021/08/04/audio_b99aee30f6.mp3?filename=soft-piano-guitar-ambient-112782.mp3" type="audio/mp3">
   </audio>
