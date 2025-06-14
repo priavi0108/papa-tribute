@@ -7,8 +7,8 @@
   <style>
     body {
       margin: 0;
-      background-color: #1a1a2e;
-      color: #eaeaea;
+      background-color: #f0f4f8; /* Soft light background */
+      color: #333; /* Darker text for better readability */
       font-family: 'Segoe UI', sans-serif;
       display: flex;
       flex-direction: column;
@@ -16,34 +16,68 @@
       justify-content: center;
       min-height: 100vh;
       text-align: center;
-      background: linear-gradient(135deg, #1a1a2e, #16213e);
+      background: linear-gradient(135deg, #f0f4f8, #d9e4f5); /* Soft gradient */
+      animation: fadeIn 1s ease-in; /* Fade-in animation */
     }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
     .container {
       max-width: 600px;
       padding: 20px;
+      border-radius: 15px; /* Rounded corners */
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+      background-color: white; /* White background for the container */
+      animation: slideIn 0.5s ease-in-out; /* Slide-in animation */
     }
+
+    @keyframes slideIn {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
     h1 {
       font-size: 2.5rem;
       margin-bottom: 0.5rem;
+      color: #2c3e50; /* Darker color for the heading */
     }
+
     p {
       margin: 0.75rem 0;
       line-height: 1.5;
     }
+
     .gif {
       margin: 20px 0;
       max-width: 100%;
       border-radius: 10px;
+      animation: pulse 2s infinite; /* Pulsing animation */
     }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
     .signature {
       margin-top: 30px;
       font-style: italic;
       font-size: 1.1rem;
+      color: #7f8c8d; /* Softer color for the signature */
     }
+
     .footer {
       margin-top: 40px;
       font-size: 0.9rem;
       color: #777;
+    }
+
+    audio {
+      display: none; /* Hide audio controls */
     }
   </style>
 </head>
@@ -51,7 +85,7 @@
   <div class="container">
     <h1>🫡 To My Papa — My Pride, My Soldier</h1>
     <p>“You stood at the nation’s border with courage.<br>Now you stand in my heart with love.”</p>
-    <img src="papa.png" alt="Tribute to Papa" style="width:100%; max-width:700px; border-radius:12px; box-shadow:0 5px 15px rgba(0,0,0,0.2);">
+    <img class="gif" src="https://media.giphy.com/media/I4kXQZV9zZlLi/giphy.gif" alt="Animated tribute" />
     <p>Dear Papa,<br>On this special day, I salute not just the soldier in you but the father who raised me with strength and love.</p>
     <p>🎂 Happy Birthday to the bravest heart I know.<br>👨‍👧 Happy Father’s Day to my eternal protector.</p>
     <p>Thank you for your service, your love, and your life lessons.<br>I’m endlessly proud to be your daughter.</p>
